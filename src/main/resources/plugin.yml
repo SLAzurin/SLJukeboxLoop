@@ -1,0 +1,18 @@
+name: SLJukeboxLoop
+description: Loop jukebox discs
+version: 0.0.1
+main: io.github.slazurin.sljukeboxloop.SLJukeboxLoop
+api-version: 1.16
+author: Azurin
+
+commands:
+    debuginfo:
+        description: Check api data for SLJukeboxLoop
+        permission-message: You do not have permission to use this command.
+        usage: /debuginfo
+        permission: sljl.debuginfo
+        
+permissions:
+    sljl.debuginfo:
+        description: use /debuginfo command
+        default: op
