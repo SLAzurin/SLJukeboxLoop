@@ -48,6 +48,10 @@ public class JukeboxListeners implements Listener {
     
     @EventHandler
     public void onJukeboxBreak(BlockBreakEvent event) {
+        if (!event.getBlock().getType().equals(Material.JUKEBOX)) {
+            return;
+        }
+        
         Jukebox j = (Jukebox) event.getBlock().getState();
 
         this.plugin.getApi().delete(j);
